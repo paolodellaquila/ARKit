@@ -15,7 +15,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        get_data_from_url("http://www.kaleidosblog.com/tutorial/tutorial.json")
+        get_data_from_url("http://idia.altervista.org/gameObjects.php?parameter=Allobjects")
+
     }
     
     
@@ -97,13 +98,16 @@ class TableViewController: UITableViewController {
         {
             for i in 0 ..< data_list.count
             {
-                if let country_obj = countries_list[i] as? NSDictionary
+                if let vr_obj = countries_list[i] as? NSDictionary
                 {
-                    if let country_name = country_obj["country"] as? String
+                    if let vr_obj_name = vr_obj["name"] as? String
                     {
-                        if let country_code = country_obj["code"] as? String
+                        if let vr_obj_cost = vr_obj["cost"] as? String
                         {
-                            TableData.append(country_name + " [" + country_code + "]")
+                            if let vr_obj_year = vr_obj["year"] as? String
+                            {
+                                TableData.append(vr_obj_name + " " + vr_obj_year + " " + vr_obj_cost)
+                            }
                         }
                     }
                 }
