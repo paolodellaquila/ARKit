@@ -78,7 +78,7 @@ class MainViewController: UIViewController {
 			DispatchQueue.main.async {
 				self.settingsButton.isEnabled = !self.isLoadingObject
 				self.addObjectButton.isEnabled = !self.isLoadingObject
-				self.screenshotButton.isEnabled = !self.isLoadingObject
+				//self.screenshotButton.isEnabled = !self.isLoadingObject
 				self.restartExperienceButton.isEnabled = !self.isLoadingObject
 			}
 		}

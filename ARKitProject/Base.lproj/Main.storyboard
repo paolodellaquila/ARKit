@@ -151,10 +151,10 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvL-Bb-I2L">
-                                <rect key="frame" x="15" y="604" width="50" height="50"/>
+                                <rect key="frame" x="27" y="573" width="35" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="UPD-AZ-fvo"/>
-                                    <constraint firstAttribute="height" constant="50" id="ujd-6C-PXZ"/>
+                                    <constraint firstAttribute="height" constant="39" id="C3b-Nc-fYJ"/>
+                                    <constraint firstAttribute="width" constant="35" id="UPD-AZ-fvo"/>
                                 </constraints>
                                 <state key="normal" image="icons8-lista-di-controllo-50"/>
                                 <connections>
@@ -166,17 +166,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OvL-Bb-I2L" firstAttribute="top" secondItem="E6c-py-dvH" secondAttribute="bottom" constant="-94" id="27q-ys-cpv"/>
                             <constraint firstItem="SuF-Os-zmb" firstAttribute="trailing" secondItem="E6c-py-dvH" secondAttribute="trailing" id="35g-18-nn3"/>
                             <constraint firstItem="BgI-fb-Vqi" firstAttribute="trailing" secondItem="E6c-py-dvH" secondAttribute="trailing" constant="-15" id="6c1-k7-y99"/>
                             <constraint firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="6h6-BI-mhL"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="7gH-DS-Crg"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" id="8nh-ZQ-AuM"/>
                             <constraint firstItem="9e0-zv-RiN" firstAttribute="top" secondItem="E6c-py-dvH" secondAttribute="top" constant="15" id="FTS-AH-WBr"/>
-                            <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="OvL-Bb-I2L" secondAttribute="trailing" constant="-65" id="GeB-yb-npJ"/>
+                            <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="OvL-Bb-I2L" secondAttribute="trailing" constant="-62" id="GeB-yb-npJ"/>
                             <constraint firstItem="j8v-6q-UBb" firstAttribute="trailing" secondItem="E6c-py-dvH" secondAttribute="trailing" constant="-15" id="Iz6-94-ZyB"/>
                             <constraint firstItem="BgI-fb-Vqi" firstAttribute="leading" secondItem="9e0-zv-RiN" secondAttribute="trailing" constant="15" id="MwJ-LS-qaQ"/>
                             <constraint firstItem="q5A-xD-w2H" firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="NdC-Ig-ZW6"/>
-                            <constraint firstItem="OvL-Bb-I2L" firstAttribute="top" secondItem="E6c-py-dvH" secondAttribute="bottom" constant="-63" id="PdS-vb-Ihh"/>
                             <constraint firstItem="SPB-Sb-hjO" firstAttribute="centerX" secondItem="E6c-py-dvH" secondAttribute="centerX" id="SHv-Jn-H5B"/>
                             <constraint firstItem="SuF-Os-zmb" firstAttribute="top" secondItem="E6c-py-dvH" secondAttribute="top" id="UMK-or-VVf"/>
                             <constraint firstItem="BgI-fb-Vqi" firstAttribute="top" secondItem="GBj-4O-Whc" secondAttribute="top" constant="20" id="V7S-nn-Lcz"/>
@@ -208,13 +208,13 @@
         <!--Virtual Object-->
         <scene sceneID="iRt-ub-FDT">
             <objects>
-                <tableViewController id="rLq-nz-2FD" sceneMemberID="viewController">
+                <tableViewController id="rLq-nz-2FD" customClass="TableViewController" customModule="ARKitProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rbk-3j-tQr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="k5w-7f-dWK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="k5w-7f-dWK">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k5w-7f-dWK" id="heM-kj-q1J">
@@ -229,7 +229,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Virtual Object" id="0M0-7Q-gfk">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="restart" id="HgP-FH-Hp8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="HgP-FH-Hp8">
                             <connections>
                                 <segue destination="BV1-FR-VrT" kind="presentation" id="Vte-bp-xq5"/>
                             </connections>
