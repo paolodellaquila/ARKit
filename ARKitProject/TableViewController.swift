@@ -94,20 +94,21 @@ class TableViewController: UITableViewController {
         }
         
         
-        if let countries_list = json as? NSArray
+        if let vr_list = json as? NSArray
         {
             for i in 0 ..< data_list.count
             {
-                if let vr_obj = countries_list[i] as? NSDictionary
+                if let vr_obj = vr_list[i] as? NSDictionary
                 {
-                    if let vr_obj_name = vr_obj["name"] as? String
+                    if let obj_name = vr_obj["name"] as? String
                     {
-                        if let vr_obj_cost = vr_obj["cost"] as? String
+                        if let obj_cost = vr_obj["cost"] as? String
                         {
-                            if let vr_obj_year = vr_obj["year"] as? String
+                            if let obj_productionyear = vr_obj["production_year"] as? String
                             {
-                                TableData.append(vr_obj_name + " " + vr_obj_year + " " + vr_obj_cost)
+                                TableData.append(obj_name + " " + obj_cost + "        " + "(" + obj_productionyear + ")")
                             }
+
                         }
                     }
                 }
